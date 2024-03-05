@@ -1,0 +1,8 @@
+Package: cimg
+Version: 3.3.2
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e4791c273255a05beaa40a0f12c75083db45e816fdba2ffac872fb995b7daad4
+Description: The CImg Library is a small, open-source, and modern C++ toolkit for image processing
+Status: install ok installed

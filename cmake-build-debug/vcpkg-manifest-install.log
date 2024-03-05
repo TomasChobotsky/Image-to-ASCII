@@ -1,0 +1,18 @@
+Detecting compiler hash for triplet x64-windows...
+The following packages will be built and installed:
+    cimg:x64-windows@3.3.2 -- C:\Users\tomas\.vcpkg-clion\vcpkg\buildtrees\versioning_\versions\cimg\0b73bf0046233dd69f0dc7962a7e0c3f961be2bc
+    vcpkg-cmake:x64-windows@2023-05-04 -- C:\Users\tomas\.vcpkg-clion\vcpkg\buildtrees\versioning_\versions\vcpkg-cmake\88a7058fc7fa73a9c4c99cfcae9d79e2abf87a5a
+Restored 2 package(s) from C:\Users\tomas\AppData\Local\vcpkg\archives in 59.8 ms. Use --debug to see more details.
+Installing 1/2 vcpkg-cmake:x64-windows@2023-05-04...
+Elapsed time to handle vcpkg-cmake:x64-windows: 6.42 ms
+vcpkg-cmake:x64-windows package ABI: 93ee6905f24c524f7be591a0362d378ca47a7bcee7a4252ded99a8d008c7aaa7
+Installing 2/2 cimg:x64-windows@3.3.2...
+Elapsed time to handle cimg:x64-windows: 18.2 ms
+cimg:x64-windows package ABI: e4791c273255a05beaa40a0f12c75083db45e816fdba2ffac872fb995b7daad4
+Total install time: 24.7 ms
+cimg provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(CImg CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE CImg::CImg)
+

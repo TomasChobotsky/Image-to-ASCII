@@ -1,0 +1,12 @@
+{
+  "name" : "image-to-ascii",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "215a2535590f1f63788ac9bd2ed58ad15e6afdff",
+  "dependencies" : [ {
+    "name" : "vcpkg-cmake",
+    "version>=" : "2023-05-04"
+  }, {
+    "name" : "cimg",
+    "version>=" : "3.3.2"
+  } ]
+}
