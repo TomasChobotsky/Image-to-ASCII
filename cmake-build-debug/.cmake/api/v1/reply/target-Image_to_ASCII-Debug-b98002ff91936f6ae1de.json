@@ -61,7 +61,7 @@
 				{
 					"backtrace" : 3,
 					"isSystem" : true,
-					"path" : "D:/Programming/C++/Toy Projects/Image-to-ASCII/cmake-build-debug/vcpkg_installed/x64-windows/include"
+					"path" : "C:/Programming/C++/ToyProjects/Image-to-ASCII/cmake-build-debug/vcpkg_installed/x64-windows/include"
 				}
 			],
 			"language" : "CXX",

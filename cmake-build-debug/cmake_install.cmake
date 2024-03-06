@@ -1,4 +1,4 @@
-# Install script for directory: D:/Programming/C++/Toy Projects/Image-to-ASCII
+# Install script for directory: C:/Programming/C++/ToyProjects/Image-to-ASCII
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Programming/C++/Toy Projects/Image-to-ASCII/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Programming/C++/ToyProjects/Image-to-ASCII/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

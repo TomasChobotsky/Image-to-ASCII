@@ -31,7 +31,7 @@ CImg<double>& convertToGrayscale(CImg<double>& image)
     return image;
 }
 
-auto pixelsToASCII(CImg<double>& image, const std::vector<char>& asciiChars)
+auto pixelsToASCII(CImg<double>& image, std::string_view chars)
 {
     std::string characters;
     cimg_forY(image, y)
@@ -40,10 +40,9 @@ auto pixelsToASCII(CImg<double>& image, const std::vector<char>& asciiChars)
         {
             auto pixel{ image(x, y, 0, 0) };
 
-            if (pixel < 25)
-                characters.push_back(asciiChars[10]);
-            else
-                characters.push_back(asciiChars[static_cast<std::size_t>(248/pixel)]);
+            double divider{ 255.0 / static_cast<double>(chars.length()) };
+
+            characters.push_back(chars[static_cast<std::size_t>(pixel/divider)]);
 
             characters.push_back(' ');
         }
@@ -53,6 +52,8 @@ auto pixelsToASCII(CImg<double>& image, const std::vector<char>& asciiChars)
 }
 
 int main(int argc, char *argv[]) {
+    // ASCII characters from darkest to lightest
+    std::string_view chars { " `.-':_,^=;><+!rc*/z?sLTv)J7(|Fi{C}fI31tlu[neoZ5Yxjya]2ESwqkP6h9d4VpOGbUAKXHm8RD#$Bg0MNWQ%&@" };
     std::vector<char> asciiChars { '@', '#', 'S', '%', '?', '*', '+', ';', ':', ',', '.' };
 
     if (argc < 2)
@@ -71,11 +72,11 @@ int main(int argc, char *argv[]) {
             std::istringstream strm( argv[2] );
             int value;
             strm >> value;
-            std::cout << pixelsToASCII(convertToGrayscale(resizeImage(image, value)), asciiChars);
+            std::cout << pixelsToASCII(convertToGrayscale(resizeImage(image, value)), chars);
         }
         catch (std::logic_error& err)
         {
-            std::cout << pixelsToASCII(convertToGrayscale(resizeImage(image)), asciiChars);
+            std::cout << pixelsToASCII(convertToGrayscale(resizeImage(image)), chars);
         }
     }
 

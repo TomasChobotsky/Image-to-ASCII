@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\JetBrains\CLion 2023.3.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"D:\Programming\C++\Toy Projects\Image-to-ASCII" -B"D:\Programming\C++\Toy Projects\Image-to-ASCII\cmake-build-debug"
+  command = "C:\Program Files\JetBrains\CLion 2023.3.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Programming\C++\ToyProjects\Image-to-ASCII -BC:\Programming\C++\ToyProjects\Image-to-ASCII\cmake-build-debug
   description = Re-running CMake...
   generator = 1
 
